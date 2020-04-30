@@ -8,8 +8,7 @@ Build our own personal pages and host it
 
 ## Topics cover in this course
 
-- Basic Html, CSS
-- Basic Javascript
+- Html, CSS, Javascript
 - React
 
 ## Syllabus
