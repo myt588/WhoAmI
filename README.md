@@ -8,8 +8,11 @@ Wednesday, June 24th 2020 16:30 - 20:30 online, Google Hangouts
 
 Instructor: 
 Mytt Mao
+
 CRM Frontend Team, Software Engineer 
+
 Slack: @Mytt, #pj-build-2020-students-hall
+
 Work Hours: Usually 12:00 to 21:00, 平日, but anytime is fine, I will respond when I see
 
 
