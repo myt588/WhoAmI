@@ -15,13 +15,17 @@ Build our own personal pages and host it
 ## Syllabus
 
 - Q&A of last lecture (~ 30 mins)
-- Concepts and Latest Tech in Frontend/Client (~ 30 mins)
+- Concepts in Frontend/Client (~ 30 mins)
+  - How do websites work?
+  - What’s the difference between front-end and back-end?
+  - HTTP (headers, auth, cookies, etc.)
+  - synchronous vs asynchronous
 - Static Page (~ 45 mins)
   - WhowAMI with Only Html
   - Add css for styling
-  - Add js for actions (introduce doms)
+  - Add plain js for actions (introduce doms)
   - Host it
-- Dynamic Page with React (~ 1 hr)
+- SPA with React (~ 1 hr)
   - Setup environment with node and webpack
   - Hello World with React (introduce virtual doms)
   - Learn React Basics
