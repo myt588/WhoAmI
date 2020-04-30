@@ -56,6 +56,19 @@ The course will cover the very basics of frontend (HTML, CSS, JS) and web-relate
   - Regenerate the WHOAMI with React
   - Host it
   
+## Evaluation 
+By 48 hours before next week’s course, students will be expected to:
+
+- Show me your page on the internet!
+- All the features I have, you should have it on your page!
+- Setup some unit tests for your code!
+
+Stretch goals: 
+- Add some animations to make your page cooler!
+
+***Warning: Failure to complete the required assignment can result in disqualification from the Build@Mercari Program. If you feel that you will have issues meeting the deadline, inform your instructor and the Build@Mercari facilitators in #pj-build-2020-students-hall Slack channel with a mention to @build-core-members or @build-instructors as soon as possible.***
+
+  
 ## Course Policy
 - I don’t believe in “cheating” when it comes to real world software engineering 
 You are encouraged to ask questions in Slack, help each other with solutions, work on the assignment together, make it better 
