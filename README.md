@@ -38,33 +38,46 @@ The course will cover the very basics of frontend (HTML, CSS, JS) and web-relate
 ## Syllabus
 
 - Q&A of last lecture (~ 30 mins)
-- Concepts in Frontend/Client (~ 30 mins)
-  - How do websites work?
-  - What’s the difference between front-end and back-end?
-  - HTTP (headers, auth, cookies, etc.)
-  - synchronous vs asynchronous
-- Static Page (~ 45 mins)
-  - WhowAMI with Only Html
-  - Add css for styling
-  - Add plain js for actions (introduce doms)
-  - Host it
-- SPA with React (~ 1 hr)
-  - Setup environment with node and webpack
-  - Hello World with React (introduce virtual doms)
-  - Learn React Basics
-  - Learn React Component lifecycle
-  - Regenerate the WHOAMI with React
-  - Host it
+- Little concept on how the web works (~ 5 mins)
+- Turn a design into real HTML and css using codepen (~ 20 mins)
+  - What is HTML?
+  - What is CSS?
+  - How to make a page responsive?
+- Open up the chrome inspector and let's play with the DOM (~ 30 mins)
+  - What is the DOM?
+  - How do you query elements?
+  - How do you add event listeners?
+  - How do you change DOM node properties?
+- JS nature and Synchronous vs Asynchronous (~ 30 mins)
+  - What is JS good at? What is JS bad at?
+  - What is the difference between Syncrhonous and Asynchronous calls?
+  - How do you make an asychronous call to an API endpoint?
+  - How do you do error handling in JS?
+- SPA with React (uisng codesandbox) (~ 60 mins)
+  - What's the difference between SPA, static page, server side rendered page?
+  - What is the virtual dom? How is it better than the DOM?
+  - What are states and props?
+  - What is stateful component and what is stateless component?
+  - How do you handle events in React?
+  - How do you write a form in React?
+  - How do you make async calls in React?
+  
+## Further study topics:
+- State management with Redux
+- Module bundler and local development environment setup with Webpack
+- Design Patterns in JS
+- CSS Tricks
+- Semantic HTML
   
 ## Evaluation 
 By 48 hours before next week’s course, students will be expected to:
 
-- Show me your page on the internet!
-- All the features I have, you should have it on your page!
-- Setup some unit tests for your code!
+- With all the things you have learned, let's build a real web page!
+- With the presented UI, please create a page that resembles the UI and component behaviours as closely as possible
 
 Stretch goals: 
 - Add some animations to make your page cooler!
+- Connect it with the backend API that you will be creating in the next week!
 
 ***Warning: Failure to complete the required assignment can result in disqualification from the Build@Mercari Program. If you feel that you will have issues meeting the deadline, inform your instructor and the Build@Mercari facilitators in #pj-build-2020-students-hall Slack channel with a mention to @build-core-members or @build-instructors as soon as possible.***
 
