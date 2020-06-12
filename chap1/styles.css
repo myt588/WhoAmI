@@ -7,7 +7,14 @@
 }
 
 a {
-  text-decoration: none;
+	color: black;
+	text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:hover {
+	color: #86E88F;
 }
 
 body {
@@ -21,11 +28,37 @@ div {
   text-align: center;
 }
 
-nav {
+header {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   position: relative;
   z-index: 3;
+  padding: 10px;
+}
+
+nav {
+  padding: 10px;
+  float: right;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	padding: 10px
+}
+
+@media all and (max-width: 600px) {
+	header {
+		margin: 10px;
+		text-align: center;
+	}
+	header > nav {
+		line-height: 1;
+    float: none;
+	}
 }
 
 footer {
