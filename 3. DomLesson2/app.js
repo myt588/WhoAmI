@@ -1,50 +1,26 @@
 // What you will learn:
-// How to grab an Element
-// How to traverse a list of Elemtns
-
-// take a look at the "document"
-// open inspection tool and type "document" then enter
-document
-document.getElementById('page-banner')
-// Grab an element by ID
-var banner = document.getElementById('page-banner')
-banner
-
-// Grab multiple elements by Classname
-var titles = document.getElementsByClassName('title')
-// It looks like an array but it's a little different -> HTML collection (https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
-titles[0]
-titles[1]
-
-// Grab elements by tag name
-var lis = document.getElementsByTagName('li')
-
-// traverse the title elements
-var titles = document.getElementsByClassName('title')
-for (var i = 0; i < titles.length; i ++) {
-  console.log(titles[i])
-}
-
-// Another way to traverse the elements
-// One of the difference between HTMLCollection and Array is that HTMLCollection cannot use array methods
-// ... is call Spread Operator: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-// It converts HTMLElements into an Array
-// ES 5
-[...titles].forEach((title) => {
-  console.log(title)
-})
-
-// ES 6
-Array.from(titles).forEach((title) => {
-  console.log(title)
-})
-
 // Change / Remove HTML elements in the DOM
 
-// Change & add CSS styles to elements
+// Update textContent of an Element
+var blogs = document.querySelectorAll('#blog-list li .name')
 
-// Read & Change elements attributes (href, src, alt, custom)
+blogs.forEach((blog) => {
+  console.log(blog.textContent)
+  // blog.textContent = 'good day mate'
+  // blog.textContent += 'Featured blog'
+})
 
-// Create new HTML elements and insert them into the DOM
+// Update HTML Element / replace HTML Element
+// const blogList = document.querySelector('#blog-list')
+// blogList.innerHTML = '<h2> Good day mate </h2>'
+// blogList.innerHTML += '<h2> Good day mate </h2>'
 
-// Attach event listeners to elements (click, keypress, submit)
+// Check parent, children, siblings
+const blogList = document.querySelector('#blog-list')
+console.log('self:', blogList)
+console.log('parentNode:', blogList.parentNode)
+console.log('childNodes:', blogList.childNodes)
+console.log('previousSibling:', blogList.previousSibling)
+console.log('nextElementSibling:', blogList.nextElementSibling)
+
+blogList.previousElementSibling.querySelector('p').innerHTML += '<br />My best blogs'

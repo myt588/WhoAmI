@@ -1,6 +1,10 @@
 // What you will learn:
-// How to grab an Element
-// How to traverse a list of Elemtns
+// DOM
+// How to grab an element/elements
+// How to traverse a list of elements
+// JS
+// JS variable declaration
+// Difference between let, const, and var
 
 // take a look at the "document"
 // open inspection tool and type "document" then enter
@@ -39,12 +43,38 @@ Array.from(titles).forEach((title) => {
   console.log(title)
 })
 
-// Change / Remove HTML elements in the DOM
+// QuerySelector to grab element/elements
+const blog2 = document.querySelector('#blog-list li:nth-child(2) .name')
+console.log(blog2)
 
-// Change & add CSS styles to elements
+let blogs = document.querySelector('#blog-list li .name')
+console.log(blogs)
 
-// Read & Change elements attributes (href, src, alt, custom)
+blogs = document.querySelectorAll('#blog-list li .name')
+console.log(blogs)
 
-// Create new HTML elements and insert them into the DOM
+// NodeList vs HTMLCollection
+// NodeList is static
+// HTMLCollection is live
 
-// Attach event listeners to elements (click, keypress, submit)
+// Diff between let, var, const (More differences: https://tylermcginnis.com/var-let-const/)
+// const needs to be initialized
+const a // error
+let a // ok
+var b // ok
+
+// const can't be mutated
+const a = 3
+a = 4 // error
+
+// Valid variable names
+var a
+var a1
+var $a
+var _a
+
+// bad variable names
+var mercari_user
+// var 1a
+// var a-1, no special chars
+// var let, reserved words
