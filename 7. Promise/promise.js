@@ -1,6 +1,8 @@
 const blogs = [
-  'DOM is so fun',
-  'Baby Hit me one more time'
+  "DOM is so fun",
+  "Javascript Rocks",
+  "You Don't Know JS",
+  "Why is JS so weird"
 ]
 
 function getBlogs() {

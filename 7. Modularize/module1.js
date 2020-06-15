@@ -2,14 +2,53 @@
 // Namespacing / no more global variables
 // Less repetitive code
 // More details on benefits: https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/
+class APIClient {
+  constructor() {
+    this.blogs  = [
+      "DOM is so fun",
+      "Javascript Rocks",
+      "You Don't Know JS",
+      "Why is JS so weird"
+    ]
+  }
+  
+  getBlogs() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(this.blogs)
+      }, 1000)
+    })
+  }
+  
+  createBlog(blog) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.blogs.push(blog)
+        resolve()
+      }, 1000)
+    })
+  }
+
+  deleteBlog(blog) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        this.blogs = this.blogs.filter((value) => value != blog)
+        resolve()
+      }, 1000)
+    })
+  }
+}
 
 class BlogList {
   constructor() {
     this.list = document.querySelector('#blog-list ul');
     this.form = document.forms['add-blog'];
+    this.addInput = document.forms['add-blog'].querySelector('input[type="text"]')
     this.hideBox = document.querySelector('#hide');
     this.searchBar = document.forms['search-blogs'].querySelector('input');
+    this.APIClient = new APIClient()
     this.bindEvents()
+    this.render()
   }
   bindEvents() {
     this.list.addEventListener('click', this.onDeleteButtonClick.bind(this));
@@ -19,30 +58,16 @@ class BlogList {
   }
   onDeleteButtonClick(e) {
     if(e.target.className == 'delete'){
-      const li = e.target.parentElement;
-      li.parentNode.removeChild(li);
+      const blog = e.target.previousSibling.innerText
+      this.APIClient.deleteBlog(blog)
+      this.render()
     }
   }
-  onSubmit(e) {
+  async onSubmit(e) {
     e.preventDefault();
-    // create elements
-    const value = this.form.querySelector('input[type="text"]').value;
-    const li = document.createElement('li');
-    const blogName = document.createElement('span');
-    const deleteBtn = document.createElement('span');
-
-    // add text content
-    blogName.textContent = value;
-    deleteBtn.textContent = 'delete';
-
-    // add classes
-    blogName.classList.add('name');
-    deleteBtn.classList.add('delete');
-
-    // append to DOM
-    li.appendChild(blogName);
-    li.appendChild(deleteBtn);
-    this.list.appendChild(li);
+    const value = this.addInput.value
+    await this.APIClient.createBlog(value)
+    this.render()
   }
   onHideBoxChange(e) {
     if(this.hideBox.checked){
@@ -62,6 +87,12 @@ class BlogList {
         blog.style.display = 'none';
       }
     });
+  }
+  async render() {
+    const blogs = await this.APIClient.getBlogs()
+    var lis = ''
+    blogs.forEach((blog) => lis += `<li><span class="name">${blog}</span><span class="delete">delete</span></li>`)
+    this.list.innerHTML = lis
   }
 }
 
