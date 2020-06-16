@@ -1,5 +1,5 @@
 import APIClient from '../services/APIClient';
-import './home.css';
+import './dom.css';
 
 class BlogList {
   constructor() {

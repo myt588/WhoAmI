@@ -62,7 +62,6 @@ module.exports = {
   ],
   devServer: {
     publicPath: '/',
-    open: true,
     hot: true,
     port: 8080,
   },
