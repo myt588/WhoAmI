@@ -1,3 +1,5 @@
+/* css selectors guide: https://www.w3schools.com/cssref/css_selectors.asp */
+
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
   --d: 700ms;
@@ -19,7 +21,7 @@ a {
   text-transform: uppercase;
 }
 
-a:hover {
+a:hover, .current {
 	color: #86E88F;
 }
 
@@ -46,7 +48,7 @@ ul {
 	list-style: none;
 }
 
-li {
+nav > ul > li {
 	display: inline-block;
 	padding: 10px
 }
