@@ -57,13 +57,3 @@ addForm.addEventListener('submit', function(e){
 // const li = document.querySelector('#blog-list li:last-child')
 // li.style.color = 'red'
 // li.style.marginTop = '60px'
-
-// Change / Remove HTML elements in the DOM
-
-// Change & add CSS styles to elements
-
-// Read & Change elements attributes (href, src, alt, custom)
-
-// Create new HTML elements and insert them into the DOM
-
-// Attach event listeners to elements (click, keypress, submit)
