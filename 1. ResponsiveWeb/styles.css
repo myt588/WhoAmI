@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
+  /* Colors */
+  --color-black: black;
+  --color-pastel-green: #86E88F;
+  
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: 'Rubik', sans-serif;
@@ -12,23 +16,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--font-sans);
 }
 
 a {
-	color: black;
+	color: var(--color-black);
 	text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 a:hover, .current {
-	color: #86E88F;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-  font-family: var(--font-sans);
+	color: var(--color-pastel-green);
 }
 
 header {
@@ -65,7 +64,7 @@ nav > ul > li {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   font-size: 12px;
   bottom: 0;
   width: 100%;
@@ -87,8 +86,13 @@ footer a:hover {
   border-bottom: 1px transparent;
 }
 
+main {
+  position: relative;
+  min-height: 100vh
+}
+
 /* Participants Card Section */
-.section-participants {
+.section-students, .section-instructors {
   padding-top: 3rem;
   text-align: center;
   margin: 0 auto;
@@ -97,7 +101,7 @@ footer a:hover {
   display: grid;
   grid-gap: 1rem;
   padding: 3rem;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: var(--font-sans);
 }
@@ -117,7 +121,7 @@ footer a:hover {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   overflow: hidden;
   padding: 1rem;
   width: 100%;
@@ -139,6 +143,7 @@ footer a:hover {
   width: 100%;
   height: 110%;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 0 0;
   -webkit-transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
   transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
@@ -164,17 +169,32 @@ footer a:hover {
   transition: transform calc(var(--d) * 2) var(--e);
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
-.card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+.mytt:before {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/build-33d3a.appspot.com/o/Yetian%20Mao.jpg?alt=media&token=c9a0a6ac-b3db-47c4-b91a-596fa178cfbd);
 }
-.card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+.aj:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WNNM1HWHY-1e8970278755-512);
 }
-.card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+.arase:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WNNLW4AMQ-b247599c0235-512);
 }
-.card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+.hide:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WNQ0F83AP-49fa10fe3429-512);
+}
+.hunter:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WP3LPQXNJ-470b0fcd2cff-512);
+}
+.domi:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WND5R6KU6-4227939dbdd3-512);
+}
+.wakanapo:before {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/build-33d3a.appspot.com/o/wakanapo.jpg?alt=media&token=48758414-69fd-45a3-b36c-e690480a1586);
+}
+.tarotaro:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WP3LPU7TQ-ddbddd8ea087-512);
+}
+.ric:before {
+  background-image: url(https://ca.slack-edge.com/ELC9K4D7G-WNQ0ACULT-e5a7c83e08c6-512);
 }
 
 .content {

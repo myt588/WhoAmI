@@ -1,5 +1,11 @@
+/* css selectors guide: https://www.w3schools.com/cssref/css_selectors.asp */
+
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
+  /* Colors */
+  --color-black: black;
+  --color-pastel-green: #86E88F;
+  
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
   --font-sans: 'Rubik', sans-serif;
@@ -10,23 +16,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--font-sans);
 }
 
 a {
-	color: black;
+	color: var(--color-black);
 	text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 a:hover, .current {
-	color: #86E88F;
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-  font-family: var(--font-sans);
+	color: var(--color-pastel-green);
 }
 
 header {
@@ -63,7 +64,7 @@ nav > ul > li {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   font-size: 12px;
   bottom: 0;
   width: 100%;
@@ -83,6 +84,11 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px transparent;
+}
+
+main {
+  position: relative;
+  min-height: 100vh
 }
 
 /* DOM Section */
