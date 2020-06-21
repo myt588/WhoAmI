@@ -35,6 +35,8 @@ addForm.addEventListener('submit', function(e){
   li.appendChild(blogName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
+
+  addForm.querySelector('input[type="text"]').value = ''
 });
 
 // hide blogs
