@@ -6,13 +6,27 @@
 // JS variable declaration
 // Difference between let, const, and var
 
+// DOM is HTML element represented by a tree of objects.
+// Browser will create a DOM after parsing the HTML file.
+// Browsers will render all elements according to this tree. 
+// Once the DOM tree is changed, browser rendering changes simultaneously. 
+// This is the base of dynamically modifying a document.
+
+// What can DOM do?
+// JavaScript can change all the HTML elements in the page
+// JavaScript can change all the HTML attributes in the page
+// JavaScript can change all the CSS styles in the page
+// JavaScript can remove existing HTML elements and attributes
+// JavaScript can add new HTML elements and attributes
+// JavaScript can react to all existing HTML events in the page
+// JavaScript can create new HTML events in the page
+
 // take a look at the "document"
 // open inspection tool and type "document" then enter
 document
 document.getElementById('page-banner')
 // Grab an element by ID
 var banner = document.getElementById('page-banner')
-banner
 
 // Grab multiple elements by Classname
 var titles = document.getElementsByClassName('title')
@@ -22,26 +36,6 @@ titles[1]
 
 // Grab elements by tag name
 var lis = document.getElementsByTagName('li')
-
-// traverse the title elements
-var titles = document.getElementsByClassName('title')
-for (var i = 0; i < titles.length; i ++) {
-  console.log(titles[i])
-}
-
-// Another way to traverse the elements
-// One of the difference between HTMLCollection and Array is that HTMLCollection cannot use array methods
-// ... is call Spread Operator: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-// It converts HTMLElements into an Array
-// ES 5
-[...titles].forEach((title) => {
-  console.log(title)
-})
-
-// ES 6
-Array.from(titles).forEach((title) => {
-  console.log(title)
-})
 
 // QuerySelector to grab element/elements
 const blog2 = document.querySelector('#blog-list li:nth-child(2) .name')
@@ -56,6 +50,28 @@ console.log(blogs)
 // NodeList vs HTMLCollection
 // NodeList is static
 // HTMLCollection is live
+const staticList = document.querySelectorAll('li');
+const dynamicList = document.getElementsByTagName('li');
+
+// loop the title elements
+var titles = document.getElementsByClassName('title')
+for (var i = 0; i < titles.length; i ++) {
+  console.log(titles[i])
+}
+
+// Another way to loop the elements
+// One of the difference between HTMLCollection and Array is that HTMLCollection cannot use array methods
+// ... is call Spread Operator: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+// It converts HTMLElements into an Array
+// ES 5
+[...titles].forEach((title) => {
+  console.log(title)
+})
+
+// ES 6
+Array.from(titles).forEach((title) => {
+  console.log(title)
+})
 
 // Diff between let, var, const (More differences: https://tylermcginnis.com/var-let-const/)
 // const needs to be initialized

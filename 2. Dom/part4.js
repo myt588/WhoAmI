@@ -30,19 +30,19 @@ addForm.addEventListener('submit', function(e){
   // create elements
   const value = addForm.querySelector('input[type="text"]').value;
   const li = document.createElement('li');
-  const bookName = document.createElement('span');
+  const blogName = document.createElement('span');
   const deleteBtn = document.createElement('span');
 
    // add text content
-   bookName.textContent = value;
+   blogName.textContent = value;
    deleteBtn.textContent = 'delete';
 
    // add class
-   bookName.className = 'name';
+   blogName.className = 'name';
    deleteBtn.className = 'delete';
  
    // append to DOM
-   li.appendChild(bookName);
+   li.appendChild(blogName);
    li.appendChild(deleteBtn);
    list.appendChild(li);
 });
