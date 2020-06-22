@@ -73,3 +73,8 @@ const asyncWay = async () => {
 }
 
 asyncWay()
+
+// Demerit of the current code:
+// 1. Everything is in global scope. All the variables are globally defined.
+// If we add another list var to this scope, there will be conflicts
+// 2. It's very hard to read without comments. 
